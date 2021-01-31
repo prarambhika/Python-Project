@@ -1,0 +1,13 @@
+html>
+<head><title>CREATE</title></head>
+<body>
+<form method="POST" action="{% url 'product'%}" enctype="multipart/form-data"> #updated
+    {% csrf_token %}
+    <input type="file" name="image"> #added
+    <input type="text" placeholder="Product name here" name="product_name">
+    <input type="number" placeholder="Price" name = "price">
+    <input type="number" placeholder="Discount" name ="discount">
+    <input type="submit" value="Submit">
+</form>
+</body>
+</html>

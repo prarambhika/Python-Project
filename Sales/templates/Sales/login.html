@@ -1,0 +1,18 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+</head>
+<link rel="stylesheet" href="{% static 'style/css/slide.css' %}">
+<body>
+<div class="login">
+	<h1>Login</h1>
+    <form method="post" action="{% url 'login_view' %}"> {% csrf_token %}
+    	<input type="text" name="username" placeholder="Username" required="required" />
+        <input type="password" name="password" placeholder="Password" required="required" />
+        <button type="submit" class="btn btn-primary btn-block btn-large">Let me in.</button>
+    </form>
+</div>
+</body>
+</html>
